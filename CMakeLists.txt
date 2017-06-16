@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.2 FATAL_ERROR)
-project ("LEAF" CXX)
+project ("LEAF" C CXX)
 
 set (CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
 
@@ -10,4 +10,5 @@ include (MacroCreateConfigFiles)
 
 macro_ensure_out_of_source_build ("Do not build LEAF in the source directory.")
 
+add_subdirectory (lib)
 
