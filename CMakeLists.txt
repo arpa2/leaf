@@ -10,5 +10,10 @@ include (MacroCreateConfigFiles)
 
 macro_ensure_out_of_source_build ("Do not build LEAF in the source directory.")
 
-add_subdirectory (lib)
+# Used by most of the actual tools, so find them up-front.
+find_package (Quick-DER REQUIRED)
+find_package (LillyDAP REQUIRED)
+
+add_subdirectory (src/lib)
+add_subdirectory (src/messagelog)
 
