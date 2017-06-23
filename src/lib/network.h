@@ -13,8 +13,8 @@
  *     SPDX short identifier: BSD-2-Clause
  */
 
-#ifndef LEAF_LISTEN_H
-#define LEAF_LISTEN_H
+#ifndef LEAF_NETWORK_H
+#define LEAF_NETWORK_H
 
 #ifdef __cplusplus
 extern "C" {
