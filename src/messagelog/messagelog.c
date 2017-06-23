@@ -71,6 +71,7 @@
 #include <lillydap/api.h>
 
 #include "lib/network.h"
+#include "lib/region.h"
 
 /* Print usage string and exit with an error. */
 void usage()
@@ -184,9 +185,9 @@ static struct LillyStructural lillydap_dump_put = {
 void dump_lilly_packets(int server_fd, int client_fd)
 {
 	/* Configure memory allocation functions -- and be silly about it */
-	lillymem_newpool_fun = sillymem_newpool;
-	lillymem_endpool_fun = sillymem_endpool;
-	lillymem_alloc_fun = sillymem_alloc;
+	lillymem_newpool_fun = leaf_newpool;
+	lillymem_endpool_fun = leaf_endpool;
+	lillymem_alloc_fun = leaf_alloc;
 
 	/* LillyDAP creates and destroys pools as needed, but we need one
 	 * for the LDAP structure and some other allocations.
