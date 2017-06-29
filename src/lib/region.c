@@ -1,5 +1,3 @@
-#include "region.h"
-
 /*
  * This slightly-more-sophisticated-than-sillymem region-based allocator
  * is still pretty silly. The pools are linked lists of fairly-large
@@ -10,6 +8,8 @@
  * Each pool also has a chain of jumbo-chunks, which are allocated only
  * for a single very-large allocation.
  */
+
+#include "region.h"
 
 #define CHUNK_SIZE	65536
 
@@ -91,8 +91,6 @@ void leaf_endpool(LillyPool lpool)
 	}
 	freechunks(pool->chunks);
 	freechunks(pool->jumbo);
-	pool->chunks = NULL;
-	pool->jumbo = NULL;
 	free(pool);
 }
 
