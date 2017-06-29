@@ -243,6 +243,8 @@ void dump_lilly_packets(int server_fd, int client_fd)
 			}
 		}
 	}
+
+	lillymem_endpool(pool);
 }
 
 int main(int argc, char **argv)
