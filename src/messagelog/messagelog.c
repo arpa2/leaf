@@ -244,6 +244,8 @@ void dump_lilly_packets(int server_fd, int client_fd)
 		}
 	}
 
+	lillymem_endpool(ldap_client->ldap.get_qpool);
+	lillymem_endpool(ldap_server->ldap.get_qpool);
 	lillymem_endpool(pool);
 }
 
