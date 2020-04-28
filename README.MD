@@ -1,5 +1,7 @@
 # Leaf (LDAP Extra Attribute Filters)
 
+<img alt="LEAF logo" src="leaf-logo.png" style="float: right;"/>
+
 > *LDAP is protocol for data communication, with rich semantics for data
 > modelling, security and database administration.  The security is
 > security-in-the-large, though, to protect the communications and
